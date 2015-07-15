@@ -2,7 +2,8 @@
 <resources>
 
     <color name="color_primary">#26a69a</color>
-    <color name="color_person_info">#4db6ac</color>
+    <color name="color_primary_dark">#4db6ac</color>
+    <color name="color_accent">#f97b5c</color>
 
     <!-- common -->
     <color name="white">#FFFFFF</color>
@@ -11,6 +12,7 @@
     <!-- background -->
     <color name="bk">#f2f2f2</color>
     <color name="bk_press">#efede5</color>
+    <color name="window_background">#FFF5F5F5</color>
 
     <!-- material design black font color -->
     <color name="font_black_0">#212121</color>
