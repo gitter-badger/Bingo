@@ -39,4 +39,6 @@ dependencies {
     compile 'com.nineoldandroids:library:2.4.0'
     compile 'cn.bingoogolapple:bga-refreshlayout:1.0.4@aar'
 
+    compile 'com.afollestad:material-dialogs:0.7.6.0'
+
 }

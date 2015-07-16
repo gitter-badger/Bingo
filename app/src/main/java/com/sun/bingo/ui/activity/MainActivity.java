@@ -52,6 +52,7 @@ public class MainActivity extends BaseActivity {
         ButterKnife.inject(this);
 
         initView();
+        initListener();
     }
 
     private void initView() {
@@ -60,6 +61,10 @@ public class MainActivity extends BaseActivity {
         drawerToggle.syncState();
         initTabLayout();
         initFloatingActionButton();
+    }
+
+    private void initListener() {
+
     }
 
     private void initTabLayout() {
@@ -91,6 +96,12 @@ public class MainActivity extends BaseActivity {
                                         Toast.LENGTH_SHORT).show();
                             }
                         }).show();
+//                new MaterialDialog.Builder(MainActivity.this)
+//                        .title("标题")
+//                        .content("消息")
+//                        .positiveText("确定")
+//                        .negativeText("取消")
+//                        .show();
             }
         });
     }
