@@ -75,6 +75,7 @@ public class EditNewBingoActivity extends BaseActivity {
             @Override
             public void onSuccess() {
                 Toast.makeText(EditNewBingoActivity.this, "提交成功", Toast.LENGTH_SHORT).show();
+                finish();
             }
 
             @Override
