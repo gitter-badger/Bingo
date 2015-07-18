@@ -5,7 +5,6 @@ import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -13,10 +12,10 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Toast;
 
 import com.sun.bingo.R;
 import com.sun.bingo.adapter.FragmentAdapter;
+import com.sun.bingo.control.NavigateManager;
 import com.sun.bingo.ui.fragment.ListFragment;
 
 import java.util.ArrayList;
@@ -86,16 +85,17 @@ public class MainActivity extends BaseActivity {
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Snackbar comes out", Snackbar.LENGTH_LONG)
-                        .setAction("Action", new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                Toast.makeText(
-                                        MainActivity.this,
-                                        "Toast comes out",
-                                        Toast.LENGTH_SHORT).show();
-                            }
-                        }).show();
+                NavigateManager.gotoEditNewBingoActivity(MainActivity.this);
+//                Snackbar.make(view, "Snackbar comes out", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", new View.OnClickListener() {
+//                            @Override
+//                            public void onClick(View v) {
+//                                Toast.makeText(
+//                                        MainActivity.this,
+//                                        "Toast comes out",
+//                                        Toast.LENGTH_SHORT).show();
+//                            }
+//                        }).show();
 //                new MaterialDialog.Builder(MainActivity.this)
 //                        .title("标题")
 //                        .content("消息")
