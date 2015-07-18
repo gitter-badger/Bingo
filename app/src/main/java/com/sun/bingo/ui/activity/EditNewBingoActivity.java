@@ -81,6 +81,7 @@ public class EditNewBingoActivity extends BaseActivity {
             @Override
             public void onFailure(int i, String s) {
                 Toast.makeText(EditNewBingoActivity.this, "提交失败", Toast.LENGTH_SHORT).show();
+                finish();
             }
         });
     }
