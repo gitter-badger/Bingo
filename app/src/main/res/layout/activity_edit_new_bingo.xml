@@ -29,7 +29,7 @@
         android:id="@+id/tv_commit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/color_accent"
+        android:background="@drawable/color_primary_selector"
         android:layout_margin="16dp"
         android:padding="16dp"
         android:gravity="center"

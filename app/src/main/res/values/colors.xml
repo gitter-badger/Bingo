@@ -6,6 +6,7 @@
     <color name="color_accent">#f97b5c</color>
 
     <color name="color_primary">#607d8b</color>
+    <color name="color_primary_light">#90a4ae</color>
     <color name="color_primary_dark">#455a64</color>
 
     <!-- common -->
