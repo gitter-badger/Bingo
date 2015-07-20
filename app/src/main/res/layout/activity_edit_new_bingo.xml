@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,36 +8,73 @@
 
     <include layout="@layout/app_toolbar"/>
 
-    <EditText
-        android:id="@+id/et_title"
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:hint="标题"
-        android:textColorHint="@color/font_black_4"
-        android:textColor="@color/color_primary"
-        android:textSize="14sp"/>
+        android:layout_margin="5dp"
+        android:layout_below="@+id/toolbar"
+        android:padding="15dp">
 
-    <EditText
-        android:id="@+id/et_content"
+        <EditText
+            android:id="@+id/et_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:maxLines="2"
+            android:padding="15dp"
+            android:hint="标题"
+            android:textColorHint="@color/font_black_4"
+            android:textColor="@color/color_primary"
+            android:textSize="14sp"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cv_title"
+        android:layout_above="@+id/rl_bottom_layout"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:padding="15dp">
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:maxLines="2"
+            android:padding="15dp"
+            android:gravity="top"
+            android:hint="内容"
+            android:textColorHint="@color/font_black_4"
+            android:textColor="@color/color_primary"
+            android:textSize="14sp"/>
+
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:hint="内容"
-        android:textColorHint="@color/font_black_4"
-        android:textColor="@color/color_primary"
-        android:textSize="14sp"/>
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_primary">
 
-    <TextView
-        android:id="@+id/tv_commit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/color_primary_selector"
-        android:layout_margin="16dp"
-        android:padding="15dp"
-        android:gravity="center"
-        android:text="提交"
-        android:textColor="@color/white"
-        android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/tv_commit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_primary_selector"
+            android:padding="15dp"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+    </RelativeLayout>
 
-</LinearLayout>
+
+
+</RelativeLayout>
