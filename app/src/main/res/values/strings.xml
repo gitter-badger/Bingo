@@ -9,6 +9,9 @@
     <string name="about">关于</string>
     <string name="exit">退出</string>
 
+    <string name="square_bingo_title">广场BINGO</string>
+    <string name="my_bingo_title">我的BINGO</string>
+
     <string name="action_settings">设置</string>
     <string name="action_notification">通知消息</string>
 

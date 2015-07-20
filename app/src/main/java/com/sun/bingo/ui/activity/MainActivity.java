@@ -68,8 +68,8 @@ public class MainActivity extends BaseActivity {
 
     private void initTabLayout() {
         List<String> titles = new ArrayList<>();
-        titles.add("Tab 1");
-        titles.add("Tab 2");
+        titles.add(getResources().getString(R.string.square_bingo_title));
+        titles.add(getResources().getString(R.string.my_bingo_title));
         tabLayout.addTab(tabLayout.newTab().setText(titles.get(0)));
         tabLayout.addTab(tabLayout.newTab().setText(titles.get(1)));
         List<Fragment> fragments = new ArrayList<>();
