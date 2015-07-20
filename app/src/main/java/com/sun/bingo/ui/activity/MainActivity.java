@@ -16,7 +16,8 @@ import android.view.View;
 import com.sun.bingo.R;
 import com.sun.bingo.adapter.FragmentAdapter;
 import com.sun.bingo.control.NavigateManager;
-import com.sun.bingo.ui.fragment.ListFragment;
+import com.sun.bingo.ui.fragment.MyBingoFragment;
+import com.sun.bingo.ui.fragment.SquareBingoFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,8 +74,8 @@ public class MainActivity extends BaseActivity {
         tabLayout.addTab(tabLayout.newTab().setText(titles.get(0)));
         tabLayout.addTab(tabLayout.newTab().setText(titles.get(1)));
         List<Fragment> fragments = new ArrayList<>();
-        fragments.add(new ListFragment());
-        fragments.add(new ListFragment());
+        fragments.add(new SquareBingoFragment());
+        fragments.add(new MyBingoFragment());
         FragmentAdapter adapter = new FragmentAdapter(getSupportFragmentManager(), fragments, titles);
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);

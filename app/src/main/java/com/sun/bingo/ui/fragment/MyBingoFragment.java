@@ -11,21 +11,32 @@ import android.view.ViewGroup;
 import com.sun.bingo.R;
 import com.sun.bingo.adapter.RecyclerViewAdapter;
 
-public class ListFragment extends Fragment {
+import butterknife.ButterKnife;
+import butterknife.InjectView;
 
-    private RecyclerView mRecyclerView;
+public class MyBingoFragment extends Fragment {
+
+    @InjectView(R.id.recycler_view)
+    RecyclerView recyclerView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        mRecyclerView =
-                (RecyclerView) inflater.inflate(R.layout.list_fragment, container, false);
-        return mRecyclerView;
+        View view = inflater.inflate(R.layout.fragment_my_bingo, container, false);
+        ButterKnife.inject(this, view);
+
+        return view;
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(mRecyclerView.getContext()));
-        mRecyclerView.setAdapter(new RecyclerViewAdapter(getActivity()));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setAdapter(new RecyclerViewAdapter(getActivity()));
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        ButterKnife.reset(this);
     }
 }
