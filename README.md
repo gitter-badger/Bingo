@@ -1,5 +1,7 @@
 #Bingo
 
+[![Join the chat at https://gitter.im/sfsheng0322/Bingo](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/sfsheng0322/Bingo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ###Bingo 的几层意思
 
 Bingo 是一种填写格子的游戏，在游戏中第一个成功者以喊“Bingo”表示取胜而得名。
